@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="DemoKeyboard" customModuleProvider="target">
+            <connections>
+                <outlet property="btnEmoji" destination="aAl-fI-SkT" id="cWI-xN-Fv4"/>
+                <outlet property="btnGif" destination="pfD-g7-Qu1" id="5dD-Uj-3So"/>
+                <outlet property="btnText" destination="MOc-PW-OzI" id="t4P-rE-5ld"/>
+                <outlet property="collImages" destination="ZqS-wz-fUv" id="zGn-7x-h35"/>
+                <outlet property="viewMask" destination="lSt-lq-lbB" id="jed-QZ-CYE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSt-lq-lbB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfD-g7-Qu1">
+                            <rect key="frame" x="20" y="7.6666666666666679" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="3ej-jv-KVz"/>
+                                <constraint firstAttribute="height" constant="35" id="zfC-Mx-emF"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="GIF"/>
+                            <connections>
+                                <action selector="btnGifClicked:" destination="-1" eventType="touchUpInside" id="qhO-IM-jgB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-fI-SkT">
+                            <rect key="frame" x="359" y="6" width="35" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="Lsa-aG-5j5"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="Emoji"/>
+                            <connections>
+                                <action selector="btnEmojiClicked:" destination="-1" eventType="touchUpInside" id="egd-SZ-F2B"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOc-PW-OzI">
+                            <rect key="frame" x="189.66666666666666" y="7.6666666666666679" width="35" height="34.666666666666657"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="TJ0-u4-kT9"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="Gallery">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnGalleryClicked:" destination="-1" eventType="touchUpInside" id="G3Z-aC-MSV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="pfD-g7-Qu1" firstAttribute="centerY" secondItem="lSt-lq-lbB" secondAttribute="centerY" id="3L4-rQ-Z5O"/>
+                        <constraint firstItem="aAl-fI-SkT" firstAttribute="centerY" secondItem="lSt-lq-lbB" secondAttribute="centerY" id="ANN-dM-xG7"/>
+                        <constraint firstItem="MOc-PW-OzI" firstAttribute="height" secondItem="aAl-fI-SkT" secondAttribute="height" multiplier="0.918367" id="K5k-19-WHo"/>
+                        <constraint firstItem="MOc-PW-OzI" firstAttribute="centerX" secondItem="lSt-lq-lbB" secondAttribute="centerX" id="MMc-Ti-q54"/>
+                        <constraint firstItem="MOc-PW-OzI" firstAttribute="centerY" secondItem="aAl-fI-SkT" secondAttribute="centerY" id="UAd-iL-hLn"/>
+                        <constraint firstItem="aAl-fI-SkT" firstAttribute="height" secondItem="pfD-g7-Qu1" secondAttribute="height" multiplier="1.08" id="cb9-an-NC7"/>
+                        <constraint firstAttribute="height" constant="50" id="nbJ-KY-vJp"/>
+                        <constraint firstItem="pfD-g7-Qu1" firstAttribute="leading" secondItem="lSt-lq-lbB" secondAttribute="leading" constant="20" id="qnT-KF-YQa"/>
+                        <constraint firstAttribute="trailing" secondItem="aAl-fI-SkT" secondAttribute="trailing" constant="20" id="zVc-PG-BVV"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZqS-wz-fUv">
+                    <rect key="frame" x="0.0" y="50" width="414" height="686"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Jmx-XE-Hmf">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="MjZ-Ek-HZ2"/>
+                        <outlet property="delegate" destination="-1" id="uiH-Vh-Loj"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZqS-wz-fUv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="J98-GW-2f2"/>
+                <constraint firstItem="ZqS-wz-fUv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cIE-gO-eKT"/>
+                <constraint firstItem="lSt-lq-lbB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dcH-Qf-6O0"/>
+                <constraint firstItem="lSt-lq-lbB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fYS-5Q-0QB"/>
+                <constraint firstItem="ZqS-wz-fUv" firstAttribute="top" secondItem="lSt-lq-lbB" secondAttribute="bottom" id="ito-or-QKy"/>
+                <constraint firstItem="ZqS-wz-fUv" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="yGw-sw-eIY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lSt-lq-lbB" secondAttribute="trailing" id="yNz-Vn-tu9"/>
+            </constraints>
+            <point key="canvasLocation" x="28.985507246376812" y="85.59782608695653"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Emoji" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="GIF" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="Gallery" width="170.66667175292969" height="170.66667175292969"/>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
